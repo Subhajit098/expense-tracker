@@ -31,13 +31,13 @@ function App() {
 
   const [expenses,setExpenses]=useState(DUMMY_EXPENSES);
 
-  const addExpenseHandler=expense=>
+  const addExpenseHandler=(expense)=>
 {
   setExpenses(prevExpenses=>
     {
-      return [...prevExpenses,expense];
+      return [expense,...prevExpenses];
     });
-}
+};
 
   return (
     <div>
